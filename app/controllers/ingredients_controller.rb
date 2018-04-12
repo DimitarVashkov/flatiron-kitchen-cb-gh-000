@@ -11,11 +11,13 @@ class IngredientsController < ApplicationController
   end
 
   def new
+    @ingredient = Ingredient.new
   end
 
   def create
   end
 
   def update
-end
+    @ingredient = Ingredient.find(params[:id])
+  end
 end
