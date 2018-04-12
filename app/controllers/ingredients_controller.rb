@@ -18,6 +18,9 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new(ing_params)
     if @ingredient.save
       redirect_to @ingredient
+    else
+      render :new
+    end
   end
 
   def update
